@@ -1,4 +1,4 @@
-import React from './new.scss'
+import './new.scss'
 
 const New = () => {
   return (

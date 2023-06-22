@@ -1,4 +1,4 @@
-import React from './list.scss'
+import './list.scss'
 
 const List = () => {
   return (

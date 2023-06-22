@@ -1,4 +1,4 @@
-import React from './single.scss'
+import './single.scss'
 
 const Single = () => {
   return (
