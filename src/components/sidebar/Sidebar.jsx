@@ -12,10 +12,14 @@ import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import SettingsSystemDaydreamOutlinedIcon from "@mui/icons-material/SettingsSystemDaydreamOutlined";
 import PsychologyOutlinedIcon from "@mui/icons-material/PsychologyOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
+import { DarkModeContext } from '../../context/darkModeContext';
+import { useContext } from 'react';
 
 // import { you pass those icons here} from "@mui/icons-material";
 
 const Sidebar = () => {
+    const {dispatch} = useContext(DarkModeContext);
+
   return (
     <div className='sidebar'>
       {/* First Child */}
@@ -89,8 +93,14 @@ const Sidebar = () => {
       </div>
       {/* Third Child */}
       <div className="bottom">
-        <div className="colorOption"></div>
-        <div className="colorOption"></div>
+        <div 
+            className="colorOption" 
+            onClick={() => dispatch({type:"LIGHT"})}
+        ></div>
+        <div 
+            className="colorOption"
+            onClick={() => dispatch({type:"DARK"})}
+         ></div>
       </div>
     </div>
   )
